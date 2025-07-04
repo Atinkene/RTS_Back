@@ -8,7 +8,11 @@ export const linkParams = {
     'Rapidité modulation (bauds)', 
     'Valence', 
     'Longueur d\'onde (nm)', 
-    'Ouverture numérique'
+    'Ouverture numérique',
+    'Dispersion chromatique (ps/nm/km)',
+    'Longueur (km)',
+    'Débit (Gbps)',
+    'Type fibre (SM/MM)', // Ajouté
   ],
   'Hertzien': [
     'Longueur guide Tx (m)', 
@@ -445,20 +449,6 @@ export const equipmentConfig = {
   },
   'Liaisons Optiques': {
     equipments: [
-      { 
-        type: 'Fibre Optique', 
-        isPassive: true, 
-        params: [
-          'Longueur (km)', 
-          'Débit (Gbps)', 
-          'Atténuation (dB/km)', 
-          'Coût unitaire (CFA)', 
-          'Longueur d\'onde (nm)', 
-          'Ouverture numérique',
-          'Type fibre (SM/MM)', // Ajouté
-          'Dispersion chromatique (ps/nm/km)' // Ajouté
-        ] 
-      },
       { 
         type: 'Multiplexeur CWDM/DWDM', 
         isPassive: true, 
