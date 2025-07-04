@@ -12,7 +12,7 @@ export const linkParams = {
     'Dispersion chromatique (ps/nm/km)',
     'Longueur (km)',
     'Débit (Gbps)',
-    'Type fibre (SM/MM)', // Ajouté
+    'Type fibre (SM/MM)',
   ],
   'Hertzien': [
     'Longueur guide Tx (m)', 
@@ -24,7 +24,6 @@ export const linkParams = {
     'Rapidité modulation (bauds)', 
     'Valence', 
     'Polarisation'
-    // SUPPRIMÉ: 'Gain antenne émettrice (dBi)', 'Gain antenne réceptrice (dBi)'
   ],
   'GSM': [
     'Total fréquences', 
@@ -36,7 +35,6 @@ export const linkParams = {
     'j', 
     'Rapidité modulation (bauds)', 
     'Valence'
-    // SUPPRIMÉ: 'Gain antenne émettrice (dBi)', 'Gain antenne réceptrice (dBi)'
   ],
   'UMTS': [
     'Bande passante (MHz)', 
@@ -48,7 +46,6 @@ export const linkParams = {
     'i', 
     'j', 
     'Facteur d\'étalement (SF)'
-    // SUPPRIMÉ: 'Gain antenne émettrice (dBi)', 'Gain antenne réceptrice (dBi)'
   ],
   '4G': [
     'Bande passante (MHz)', 
@@ -62,11 +59,10 @@ export const linkParams = {
     'j', 
     'Modulation (QPSK/16QAM/64QAM/256QAM)', 
     'Code rate'
-    // SUPPRIMÉ: 'Gain antenne émettrice (dBi)', 'Gain antenne réceptrice (dBi)'
   ],
   '5G': [
     'FrequencyBand', 
-    'Fréquence (MHz)', 
+    'Fréquence (GHz)', // Uniformisé en GHz pour 5G
     'Bande passante (MHz)', 
     'Couches MIMO', 
     'Rayon cellule (km)', 
@@ -79,7 +75,6 @@ export const linkParams = {
     'Numerology (μ)', 
     'Modulation (QPSK/16QAM/64QAM/256QAM/1024QAM)', 
     'Beamforming gain (dB)'
-    // SUPPRIMÉ: 'Gain antenne émettrice (dBi)', 'Gain antenne réceptrice (dBi)'
   ],
   'RJ45': [
     'Catégorie', 
@@ -90,8 +85,8 @@ export const linkParams = {
     'Atténuation (dB/100m)', 
     'Fréquence maximale (MHz)', 
     'Débit nominal (Mbps)',
-    'Longueur (m)', 
-    'Impédance caractéristique (Ω)'
+    'Longueur (m)'
+    // Supprimé le doublon 'Impédance caractéristique (Ω)'
   ],
 };
 
@@ -109,7 +104,7 @@ export const equipmentConfig = {
           'Capacité (Mbps)', 
           'Coût unitaire (CFA)', 
           'Gain antenne (dBi)',
-          'Sensibilité récepteur (dBm)' // Ajouté pour cohérence
+          'Sensibilité récepteur (dBm)'
         ] 
       },
       { 
@@ -138,9 +133,9 @@ export const equipmentConfig = {
         params: [
           'Gain antenne (dBi)', 
           'Coût unitaire (CFA)',
-          'Fréquence centrale (MHz)', // Ajouté
-          'Bande passante (MHz)', // Ajouté
-          'Type polarisation' // Ajouté
+          'Fréquence centrale (MHz)',
+          'Bande passante (MHz)',
+          'Type polarisation'
         ] 
       },
     ],
@@ -157,7 +152,7 @@ export const equipmentConfig = {
           'Capacité (Mbps)', 
           'Coût unitaire (CFA)', 
           'Gain antenne (dBi)',
-          'Sensibilité récepteur (dBm)' // Ajouté
+          'Sensibilité récepteur (dBm)'
         ] 
       },
       { 
@@ -206,8 +201,8 @@ export const equipmentConfig = {
           'Coût unitaire (CFA)', 
           'Couches MIMO', 
           'Gain antenne (dBi)',
-          'Fréquence (MHz)', // Ajouté
-          'Sensibilité récepteur (dBm)' // Ajouté
+          'Fréquence (MHz)',
+          'Sensibilité récepteur (dBm)'
         ] 
       },
       { 
@@ -223,7 +218,7 @@ export const equipmentConfig = {
           'Coût unitaire (CFA)',
           'Fréquence centrale (MHz)',
           'Bande passante (MHz)',
-          'Couches MIMO supportées' // Ajouté
+          'Couches MIMO supportées'
         ] 
       },
       { 
@@ -234,7 +229,7 @@ export const equipmentConfig = {
           'Fréquence (MHz)', 
           'Coût unitaire (CFA)', 
           'Gain antenne (dBi)',
-          'Sensibilité récepteur (dBm)' // Ajouté
+          'Sensibilité récepteur (dBm)'
         ] 
       },
       { 
@@ -258,9 +253,9 @@ export const equipmentConfig = {
           'Coût unitaire (CFA)', 
           'Gain antenne (dBi)', 
           'Numerology (μ)',
-          'Fréquence (MHz)', // Ajouté
-          'Sensibilité récepteur (dBm)', // Ajouté
-          'FrequencyBand' // Ajouté (sub-6/mmWave)
+          'Fréquence (GHz)', // Uniformisé en GHz
+          'Sensibilité récepteur (dBm)',
+          'FrequencyBand'
         ] 
       },
       { 
@@ -275,9 +270,9 @@ export const equipmentConfig = {
           'Gain antenne (dBi)', 
           'Beams', 
           'Coût unitaire (CFA)',
-          'Fréquence centrale (MHz)', // Ajouté
-          'Bande passante (MHz)', // Ajouté
-          'Ouverture faisceau (°)' // Ajouté
+          'Fréquence centrale (GHz)', // Uniformisé en GHz
+          'Bande passante (MHz)',
+          'Ouverture faisceau (°)'
         ] 
       },
       { 
@@ -288,8 +283,8 @@ export const equipmentConfig = {
           'Portée (m)', 
           'Coût unitaire (CFA)', 
           'Gain antenne (dBi)',
-          'Fréquence (MHz)', // Ajouté
-          'Sensibilité récepteur (dBm)' // Ajouté
+          'Fréquence (GHz)', // Uniformisé en GHz
+          'Sensibilité récepteur (dBm)'
         ] 
       },
       { 
@@ -300,7 +295,7 @@ export const equipmentConfig = {
           'Fréquence (GHz)', 
           'Coût unitaire (CFA)', 
           'Gain antenne (dBi)',
-          'Sensibilité récepteur (dBm)' // Ajouté
+          'Sensibilité récepteur (dBm)'
         ] 
       },
       { 
@@ -369,7 +364,6 @@ export const equipmentConfig = {
         isPassive: true, 
         params: ['Débit (Gbps)', 'Coût unitaire (CFA)'] 
       },
-      
     ],
   },
   'Liaisons Hertziennes': {
@@ -384,7 +378,7 @@ export const equipmentConfig = {
           'Débit (Mbps)', 
           'Coût unitaire (CFA)', 
           'Polarisation',
-          'Ouverture faisceau (°)' // Ajouté
+          'Ouverture faisceau (°)'
         ] 
       },
       { 
@@ -395,7 +389,7 @@ export const equipmentConfig = {
           'Fréquence (GHz)', 
           'Coût unitaire (CFA)', 
           'Gain antenne (dBi)',
-          'Sensibilité récepteur (dBm)' // Ajouté
+          'Sensibilité récepteur (dBm)'
         ] 
       },
       { 
@@ -420,7 +414,7 @@ export const equipmentConfig = {
           'Diamètre (m)', 
           'Gain antenne (dBi)', 
           'Coût unitaire (CFA)',
-          'Fréquence centrale (GHz)' // Ajouté
+          'Fréquence centrale (GHz)'
         ] 
       },
       { 
@@ -430,7 +424,7 @@ export const equipmentConfig = {
           'Puissance (dBm)', 
           'Bande passante (MHz)', 
           'Coût unitaire (CFA)',
-          'Sensibilité récepteur (dBm)' // Ajouté
+          'Sensibilité récepteur (dBm)'
         ] 
       },
       { 
@@ -445,7 +439,7 @@ export const equipmentConfig = {
       { 
         type: 'Multiplexeur CWDM/DWDM', 
         isPassive: true, 
-        params: ['Canaux', 'Coût unitaire (CFA)', 'Espacement canal (nm)'] // Ajouté espacement
+        params: ['Canaux', 'Coût unitaire (CFA)', 'Espacement canal (nm)'] 
       },
       { 
         type: 'Répartiteur Optique (ODF)', 
@@ -459,8 +453,8 @@ export const equipmentConfig = {
         params: [
           'Gain (dB)', 
           'Coût unitaire (CFA)',
-          'Puissance saturée (dBm)', // Ajouté
-          'Figure de bruit (dB)' // Ajouté
+          'Puissance saturée (dBm)',
+          'Figure de bruit (dB)'
         ] 
       },
       { 
@@ -469,8 +463,8 @@ export const equipmentConfig = {
         params: [
           'Débit (Gbps)', 
           'Coût unitaire (CFA)',
-          'Sensibilité récepteur (dBm)', // Ajouté
-          'Puissance émission (dBm)' // Ajouté
+          'Sensibilité récepteur (dBm)',
+          'Puissance émission (dBm)'
         ] 
       },
       { 
@@ -481,7 +475,7 @@ export const equipmentConfig = {
       { 
         type: 'Connecteur Optique', 
         isPassive: true, 
-        params: ['Perte (dB)', 'Coût unitaire (CFA)', 'Type connecteur'] // Ajouté type
+        params: ['Perte (dB)', 'Coût unitaire (CFA)', 'Type connecteur'] 
       },
     ],
   },
@@ -495,8 +489,8 @@ export const equipmentConfig = {
           'Bande passante (MHz)', 
           'Coût unitaire (CFA)', 
           'Gain antenne (dBi)',
-          'Fréquence (MHz)', // Ajouté
-          'Sensibilité récepteur (dBm)' // Ajouté
+          'Fréquence (MHz)',
+          'Sensibilité récepteur (dBm)'
         ] 
       },
       { 
@@ -510,8 +504,8 @@ export const equipmentConfig = {
         params: [
           'Gain antenne (dBi)', 
           'Coût unitaire (CFA)',
-          'Fréquence centrale (MHz)', // Ajouté
-          'Bande passante (MHz)' // Ajouté
+          'Fréquence centrale (MHz)',
+          'Bande passante (MHz)'
         ] 
       },
       { 
@@ -523,7 +517,7 @@ export const equipmentConfig = {
           'Débit (Mbps)', 
           'Coût unitaire (CFA)', 
           'Gain antenne (dBi)',
-          'Fréquence (MHz)' // Ajouté
+          'Fréquence (MHz)'
         ] 
       },
       { 
@@ -533,8 +527,8 @@ export const equipmentConfig = {
           'Puissance (dBm)', 
           'Coût unitaire (CFA)', 
           'Gain antenne (dBi)',
-          'Fréquence (MHz)', // Ajouté
-          'Portée (m)' // Ajouté
+          'Fréquence (MHz)',
+          'Portée (m)'
         ] 
       },
       { 
@@ -559,8 +553,8 @@ export const equipmentConfig = {
           'Puissance (dBm)', 
           'Gain (dB)', 
           'Coût unitaire (CFA)',
-          'Fréquence (MHz)', // Ajouté
-          'Sensibilité récepteur (dBm)' // Ajouté
+          'Fréquence (MHz)',
+          'Sensibilité récepteur (dBm)'
         ] 
       },
       { 
@@ -571,8 +565,8 @@ export const equipmentConfig = {
           'Puissance (dBm)', 
           'Gain (dB)', 
           'Coût unitaire (CFA)',
-          'Fréquence (MHz)', // Ajouté
-          'Figure de bruit (dB)' // Ajouté
+          'Fréquence (MHz)',
+          'Figure de bruit (dB)'
         ] 
       },
       { 
@@ -582,8 +576,8 @@ export const equipmentConfig = {
         params: [
           'Puissance (dBm)', 
           'Coût unitaire (CFA)',
-          'Fréquence (MHz)', // Ajouté
-          'Sensibilité récepteur (dBm)' // Ajouté
+          'Fréquence (MHz)',
+          'Sensibilité récepteur (dBm)'
         ] 
       },
     ],

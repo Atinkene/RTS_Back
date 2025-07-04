@@ -376,7 +376,7 @@ const calculateDirectLinkBudget = (sourceNode, targetNode, edge) => {
     if (linkType === '5G') {
       const numerologyMu = parseFloat(edge.data?.params?.['Numerology (μ)'] || 1);
       const numerologyParams = calculate5GNumerology(
-        parseFloat(txNode.data.params['Fréquence (MHz)'] || 3500), 
+        parseFloat(txNode.data.params['Fréquence (GHz)'] || 3500), 
         parseFloat(edge.data?.params?.['Bande passante (MHz)'] || 100), 
         numerologyMu
       );
