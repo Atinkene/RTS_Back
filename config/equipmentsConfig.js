@@ -89,7 +89,9 @@ export const linkParams = {
     'Impédance caractéristique (Ω)', 
     'Atténuation (dB/100m)', 
     'Fréquence maximale (MHz)', 
-    'Débit nominal (Mbps)'
+    'Débit nominal (Mbps)',
+    'Longueur (m)', 
+    'Impédance caractéristique (Ω)'
   ],
 };
 
@@ -367,16 +369,7 @@ export const equipmentConfig = {
         isPassive: true, 
         params: ['Débit (Gbps)', 'Coût unitaire (CFA)'] 
       },
-      { 
-        type: 'Connecteur RJ45', 
-        isPassive: true, 
-        params: [
-          'Catégorie (Cat5e/Cat6/Cat6a)', 
-          'Longueur (m)', 
-          'Coût unitaire (CFA)', 
-          'Impédance caractéristique (Ω)'
-        ] 
-      },
+      
     ],
   },
   'Liaisons Hertziennes': {
