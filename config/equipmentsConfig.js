@@ -603,7 +603,6 @@ export const linkCompatibility = {
   'Liaisons Hertziennes': ['Hertzien'],
   'Liaisons Optiques': ['Optique'],
   'Équipements CPE': ['RJ45', 'Optique', 'GSM', 'UMTS', '4G', '5G'],
-  'Répéteurs/Amplificateurs': ['Hertzien', 'Optique'],
 };
 
 export const getEquipmentProperties = (type) => {
